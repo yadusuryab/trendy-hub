@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState, useCallback, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,7 @@ import ProductCard2 from "@/components/product/product-image-card";
 
 const LIMIT = 12;
 
-export default function ProductList() {
+ function ProductList() {
   const [items, setItems] = useState<any[]>([]);
   const [view, setView] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -155,3 +155,12 @@ export default function ProductList() {
     </div>
   );
 }
+
+export default function Page() {
+  return (
+    <Suspense fallback={<Loading />}>
+      <ProductList />
+    </Suspense>
+  );
+}
+
