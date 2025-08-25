@@ -37,7 +37,7 @@ export default function CheckoutPage() {
 
   const handlePaymentChange = (method: "online" | "cod") => {
     setPaymentMethod(method);
-    setShippingCharge(method === "online" ? 80 : 80);
+    setShippingCharge(method === "online" ? 0 : 0);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
