@@ -31,11 +31,11 @@ export const OrderSummary = ({
         <span>Subtotal</span>
         <span>₹{subtotal}</span>
       </div>
-      <div className="flex items-center justify-between">
+      {/* <div className="flex items-center justify-between">
         <span>Shipping Charges</span>
         <span>₹{shippingCharge}</span>
       </div>
-      {/* <div className="flex items-center justify-between">
+       <div className="flex items-center justify-between">
         <span>Platform Fee</span>
         <span>₹{(totalAmount - subtotal - shippingCharge).toFixed(2)}</span>
       </div> */}
@@ -43,7 +43,7 @@ export const OrderSummary = ({
     <Separator />
     <div className="flex items-center justify-between font-medium">
       <span>Total</span>
-      <span>₹{totalAmount.toFixed(2)}</span>
+      <span>₹{subtotal.toFixed(2)}</span>
     </div>
   </div>
 );
