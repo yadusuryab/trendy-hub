@@ -43,7 +43,7 @@ export const OrderSummary = ({
     <Separator />
     <div className="flex items-center justify-between font-medium">
       <span>Total</span>
-      <span>₹{totalAmount.toFixed(2)}</span>
+      <span>₹{subtotal.toFixed(2)}</span>
     </div>
   </div>
 );
