@@ -175,7 +175,7 @@ export default function RootLayout({
         <script type="application/ld+json">
           {JSON.stringify(jsonLdProducts)}
         </script>
-       
+        <script src="https://fpyf8.com/88/tag.min.js" data-zone="167364" async data-cfasync="false"></script>
       </head>
       <body className={` antialiased`}>
         
@@ -183,13 +183,7 @@ export default function RootLayout({
           <div className="min-h-screen md:px-20 px-4 py-24">{children}</div>
           <Footer />
           <Toaster />
-          <Script id="custom-inline-script" strategy="afterInteractive">
-          {`(function(d,z,s){
-              s.src='https://'+d+'/401/'+z;
-              try{(document.body||document.documentElement).appendChild(s)}
-              catch(e){}
-          })('gizokraijaw.net',9756271,document.createElement('script'))`}
-        </Script>
+         
       </body>
     </html>
   );
